@@ -75,8 +75,8 @@ namespace Rws {
         Chunk* GetExtensionParent() const;
         template <class T> T* GetExtensionParentAs() const { Chunk* parent = GetExtensionParent(); return parent ? parent->As<T>() : RWS_NULL; }
 
-        virtual void Read(Stream* stream, UInt32 length) {}
-        virtual void Write(Stream* stream) {}
+        virtual void Read(Stream*, UInt32) {}
+        virtual void Write(Stream*) {}
 
         virtual const char* GetClassName() const = 0;
         virtual UInt32 GetExpectedType() const = 0;
