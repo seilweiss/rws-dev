@@ -3,7 +3,6 @@
 #include "rws/core/version.h"
 #include "rws/core/chunk_extension.h"
 
-#include <algorithm>
 #include <cstdlib>
 #include <cstring>
 
@@ -168,14 +167,6 @@ namespace Rws {
         }
 
         return children;
-    }
-
-    template <class T> std::vector<T*> Chunk::GetChildren() const
-    {
-        std::vector<Chunk*> children = GetChildrenByType(T::GetExpectedTypeStatic());
-        std::vector<T*> inherited;
-
-        std::transform(children.begin(), children.end(), inherited.begin(), [](Chunk* chunk) { return (T*)chunk; });
     }
 
     Int32 Chunk::GetChildIndex(const Chunk* searchChild) const

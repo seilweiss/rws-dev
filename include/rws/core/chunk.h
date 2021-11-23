@@ -55,7 +55,20 @@ namespace Rws {
         Chunk* GetLastChild() const;
         std::vector<Chunk*> GetChildren() const;
         std::vector<Chunk*> GetChildrenByType(UInt32 type) const;
-        template <class T> std::vector<T*> GetChildren() const;
+
+        template <class T> std::vector<T*> GetChildren() const
+        {
+            std::vector<Chunk*> children = GetChildrenByType(T::GetExpectedTypeStatic());
+            std::vector<T*> inherited;
+
+            for (Chunk* child : children)
+            {
+                inherited.push_back((T*)child);
+            }
+
+            return inherited;
+        }
+
         Int32 GetChildIndex(const Chunk* child) const;
         Bool HasChild(Chunk* child) const { return child->m_parent == this; }
         UInt32 GetChildCount() const;

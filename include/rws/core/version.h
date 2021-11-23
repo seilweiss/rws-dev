@@ -19,7 +19,7 @@ namespace Rws {
 
     inline UInt32 LibraryIDToVersion(UInt32 libraryID)
     {
-        return (((libraryID >> 14) & 0x3FF00) + 0x30000) | ((libraryID >> 16) & 0xFFFF);
+        return (((libraryID >> 14) & 0x3FF00) + 0x30000) | ((libraryID >> 16) & 0x3F);
     }
 
     inline UInt32 LibraryIDToBuildNum(UInt32 libraryID)
