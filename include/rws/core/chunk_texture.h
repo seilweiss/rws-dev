@@ -13,7 +13,7 @@ namespace Rws {
 
     public:
         TextureStruct* GetStruct() const { return GetChild<TextureStruct>(); }
-        String* GetName() const { return GetChild<String>(0); }
+        String* GetTextureName() const { return GetChild<String>(0); }
         String* GetMaskName() const { return GetChild<String>(1); }
     };
 

@@ -11,11 +11,11 @@
         ClassName() : Chunk((type)) {}\
         static void Register() { Rws::Stream::RegisterChunkType((type), (parentType), [] { return (Chunk*)new ClassName; }); }\
         static void Unregister() { Rws::Stream::UnregisterChunkType((type), (parentType)); }\
-        static const char* GetClassNameStatic() { return #ClassName; }\
+        static const char* GetNameStatic() { return #ClassName; }\
         static UInt32 GetExpectedTypeStatic() { return (type); }\
         static UInt32 GetExpectedParentTypeStatic() { return (parentType); }\
         static Bool IsComplexStatic() { return (isComplex); }\
-        virtual const char* GetClassName() const { return #ClassName; }\
+        virtual const char* GetName() const { return #ClassName; }\
         virtual UInt32 GetExpectedType() const { return (type); }\
         virtual UInt32 GetExpectedParentType() const { return (parentType); }\
         virtual Bool IsComplex() const { return (isComplex); }\
@@ -91,7 +91,7 @@ namespace Rws {
         virtual void Read(Stream*, UInt32) {}
         virtual void Write(Stream*) {}
 
-        virtual const char* GetClassName() const = 0;
+        virtual const char* GetName() const = 0;
         virtual UInt32 GetExpectedType() const = 0;
         virtual UInt32 GetExpectedParentType() const = 0;
         virtual Bool IsComplex() const = 0;

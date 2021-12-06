@@ -7,9 +7,9 @@
     public:\
         static void Register() { Rws::NativeData::RegisterPlatformType((platformID), [] { return (NativeDataPlatform*)new ClassName; }); }\
         static void Unregister() { Rws::NativeData::UnregisterPlatformType((platformID)); }\
-        static const char* GetClassNameStatic() { return #ClassName; }\
+        static const char* GetNameStatic() { return #ClassName; }\
         static UInt32 GetPlatformIDStatic() { return (platformID); }\
-        virtual const char* GetClassName() const { return #ClassName; }\
+        virtual const char* GetName() const { return #ClassName; }\
         virtual UInt32 GetPlatformID() const { return (platformID); }
 
 namespace Rws {
