@@ -28,7 +28,7 @@ namespace Rws {
     {
     public:
         Chunk(UInt32 type);
-        ~Chunk();
+        virtual ~Chunk();
 
         template <class T> T* As() const { return IsType(T::GetExpectedTypeStatic()) ? (T*)this : RWS_NULL; }
 
