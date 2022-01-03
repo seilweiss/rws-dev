@@ -13,6 +13,8 @@
 #include "rws/core/chunk_framelist.h"
 #include "rws/core/chunk_string.h"
 #include "rws/core/chunk_texture.h"
+#include "rws/core/chunk_texdictionary.h"
+#include "rws/core/chunk_texturenative.h"
 #include "rws/core/chunk_unicodestring.h"
 
 namespace Rws {
@@ -27,6 +29,10 @@ namespace Rws {
             String::Register();
             Texture::Register();
             TextureStruct::Register();
+            TexDictionary::Register();
+            TexDictionaryStruct::Register();
+            TextureNative::Register();
+            TextureNativeStruct::Register();
             UnicodeString::Register();
         }
 
@@ -38,6 +44,10 @@ namespace Rws {
             String::Unregister();
             Texture::Unregister();
             TextureStruct::Unregister();
+            TexDictionary::Unregister();
+            TexDictionaryStruct::Unregister();
+            TextureNative::Unregister();
+            TextureNativeStruct::Unregister();
             UnicodeString::Unregister();
         }
 

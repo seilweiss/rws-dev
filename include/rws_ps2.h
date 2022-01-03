@@ -4,14 +4,14 @@
 
 namespace Rws {
 
-    namespace WorldPlugin {
+    namespace PS2 {
 
-        inline void RegisterPS2()
+        inline void Register()
         {
             NativeDataPS2::Register();
         }
 
-        inline void UnregisterPS2()
+        inline void Unregister()
         {
             NativeDataPS2::Unregister();
         }

@@ -153,8 +153,13 @@
   <ItemGroup>
     <ClInclude Include="include\rws\core\byte_array.h" />
     <ClInclude Include="include\rws\core\chunk_default.h" />
+    <ClInclude Include="include\rws\core\chunk_texdictionary.h" />
+    <ClInclude Include="include\rws\core\chunk_texturenative.h" />
     <ClInclude Include="include\rws\core\chunk_unicodestring.h" />
     <ClInclude Include="include\rws\core\frame.h" />
+    <ClInclude Include="include\rws\core\native\texturenative_xbox.h" />
+    <ClInclude Include="include\rws\core\native\texturenative_default.h" />
+    <ClInclude Include="include\rws\core\native\texturenative_platform.h" />
     <ClInclude Include="include\rws\world\chunk_atomic.h" />
     <ClInclude Include="include\rws\world\chunk_binmesh.h" />
     <ClInclude Include="include\rws\core\chunk.h" />
@@ -184,15 +189,18 @@
     <ClInclude Include="include\rws\core\version.h" />
     <ClInclude Include="include\rws_core.h" />
     <ClInclude Include="include\rws_hanim.h" />
-    <ClInclude Include="include\rws_world_gc.h" />
+    <ClInclude Include="include\rws_gc.h" />
     <ClInclude Include="include\rws_skin.h" />
     <ClInclude Include="include\rws_world.h" />
-    <ClInclude Include="include\rws_world_ps2.h" />
-    <ClInclude Include="include\rws_world_xbox.h" />
+    <ClInclude Include="include\rws_ps2.h" />
+    <ClInclude Include="include\rws_xbox.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\rws\core\byte_array.cpp" />
+    <ClCompile Include="src\rws\core\chunk_texdictionary.cpp" />
+    <ClCompile Include="src\rws\core\chunk_texturenative.cpp" />
     <ClCompile Include="src\rws\core\chunk_unicodestring.cpp" />
+    <ClCompile Include="src\rws\core\native\texturenative_xbox.cpp" />
     <ClCompile Include="src\rws\world\chunk_atomic.cpp" />
     <ClCompile Include="src\rws\world\chunk_binmesh.cpp" />
     <ClCompile Include="src\rws\core\chunk.cpp" />

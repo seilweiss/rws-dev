@@ -4,14 +4,14 @@
 
 namespace Rws {
 
-    namespace WorldPlugin {
+    namespace GameCube {
 
-        inline void RegisterGameCube()
+        inline void Register()
         {
             NativeDataGameCube::Register();
         }
 
-        inline void UnregisterGameCube()
+        inline void Unregister()
         {
             NativeDataGameCube::Unregister();
         }

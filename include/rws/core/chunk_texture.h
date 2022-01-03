@@ -2,6 +2,7 @@
 
 #include "rws/core/chunk.h"
 #include "rws/core/chunk_string.h"
+#include "rws/core/core_common.h"
 
 namespace Rws {
 
@@ -22,39 +23,15 @@ namespace Rws {
         RWS_CHUNK(TextureStruct, ID_STRUCT, ID_TEXTURE, RWS_FALSE)
 
     public:
-        enum FilterMode
-        {
-            FILTER_NA = 0,
-            FILTER_NEAREST = 1,
-            FILTER_LINEAR = 2,
-            FILTER_MIPNEAREST = 3,
-            FILTER_MIPLINEAR = 4,
-            FILTER_LINEARMIPNEAREST = 5,
-            FILTER_LINEARMIPLINEAR = 6,
-            FILTER_MASK = 0xFF
-        };
-
-        enum AddressMode
-        {
-            ADDRESS_NA = 0,
-            ADDRESS_WRAP = 1,
-            ADDRESS_MIRROR = 2,
-            ADDRESS_CLAMP = 3,
-            ADDRESS_BORDER = 4,
-            ADDRESS_UMASK = 0xF00,
-            ADDRESS_VMASK = 0xF000,
-            ADDRESS_MASK = (ADDRESS_UMASK | ADDRESS_VMASK)
-        };
-
         enum StreamFlags
         {
             STREAMFLAGS_NA = 0x0,
             STREAMFLAGS_USERMIPMAPS = 0x1
         };
 
-        FilterMode filtering;
-        AddressMode addressingU;
-        AddressMode addressingV;
+        TextureFilterMode filtering;
+        TextureAddressMode addressingU;
+        TextureAddressMode addressingV;
         StreamFlags flags;
 
         Texture* GetTexture() const { return GetParentAs<Texture>(); }

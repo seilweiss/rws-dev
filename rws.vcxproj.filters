@@ -120,13 +120,28 @@
     <ClInclude Include="include\rws\world\native\nativedata_xbox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\rws_world_gc.h">
+    <ClInclude Include="include\rws\core\chunk_texdictionary.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\rws_world_ps2.h">
+    <ClInclude Include="include\rws\core\chunk_texturenative.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\rws_world_xbox.h">
+    <ClInclude Include="include\rws\core\native\texturenative_platform.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rws\core\native\texturenative_default.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rws\core\native\texturenative_xbox.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rws_gc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rws_ps2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\rws_xbox.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -195,6 +210,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="src\rws\world\native\nativedata_xbox.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rws\core\chunk_texdictionary.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rws\core\chunk_texturenative.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="src\rws\core\native\texturenative_xbox.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

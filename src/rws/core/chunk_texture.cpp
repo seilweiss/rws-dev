@@ -7,9 +7,9 @@ namespace Rws {
         UInt32 filterAndAddress;
         stream->Read(&filterAndAddress);
 
-        filtering = (FilterMode)(filterAndAddress & FILTER_MASK);
-        addressingU = (AddressMode)((filterAndAddress >> 8) & 0xF);
-        addressingV = (AddressMode)((filterAndAddress >> 12) & 0xF);
+        filtering = (TextureFilterMode)(filterAndAddress & FILTER_MASK);
+        addressingU = (TextureAddressMode)((filterAndAddress >> 8) & 0xF);
+        addressingV = (TextureAddressMode)((filterAndAddress >> 12) & 0xF);
         flags = (StreamFlags)((filterAndAddress >> 16) & 0xFF);
     }
 
